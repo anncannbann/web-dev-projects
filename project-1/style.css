@@ -1,20 +1,76 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
-*{
+* {
     box-sizing: border-box;
-
-}
-
-
-body{
-    font-family: 'Lobster',sans-serif;
+  }
+  
+  body {
     background-color: rgb(203, 176, 228);
-    margin: 0;
-    display: flex;
-    flex-direction:column;
+    font-family: 'Lobster', sans-serif;
+    /* display: flex; */
     align-items: center;
     justify-content: center;
-    height:100vh;
-    overflow: hidden;
+    height: 100vh;
+    margin: 0; 
+  }
+  section {
+    display: -webkit-flex;
+    display: flex;
+  }
+  .intro{
+        margin-top: 30vh;
+        margin-bottom: 30vh;
+        padding:20px;
+        font-size: large;
+        color:#000;
+        text-align:center;
 }
+  .container {
+    display: flex;
+    width: 90vw;
+  }
 
+  .panel{
+      display: flex;
+    background-size: auto 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh;
+    border-radius: 80px;
+    color:rgb(145, 1, 1);
+    cursor: pointer;
+    flex:0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+  }
+  
+  .panel h3{
+      font-size: 24px;
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      margin: 0;
+      opacity: 0;
+  }
+  .panel.active {
+      flex:1;
+
+  }
+
+  .panel.active h3{
+      opacity: 1;
+      background-color: whitesmoke;
+      transition: opacity 0.3s ease in 0.4s ;
+  }
+  @media(max-width :480px){
+      .container{
+          width:100vw;
+      }
+
+     .panel:nth-of-type(4),
+     .panel:nth-of-type(5){
+         display: none;
+     }
+
+  }
