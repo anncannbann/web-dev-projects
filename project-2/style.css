@@ -91,7 +91,7 @@ body{
 
 .btn{
     background-color: var(--line-border-fill);
-    color:var(--line-border-empty);
+    color:#000;
     border-radius: 6px;
     cursor:pointer;
     font-family: inherit;
@@ -107,5 +107,10 @@ body{
 
 .btn:focus{
     outline:0;
+
+}
+.btn:disabled{
+    background-color: var(--line-border-empty);
+    cursor: not-allowed;
 
 }
